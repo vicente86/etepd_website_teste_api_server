@@ -67,7 +67,8 @@ export const raiz = `
     <h1>Servidor Provisório ETEPD website</h1>
     <h2>Servidor com o banco de dados</h2>
     <p>Servidor com o banco de dados rodando no endereço: <span>http://localhost:3001/</span></br>
-       Banco de dados usado: sqlite3
+       Banco de dados usado: sqlite3</br>
+       Github do projeto: https://github.com/vicente86/etepd_website_teste_api_server
     </p>
 
     <h2>Projeto do site etepd_website_teste</h2>
