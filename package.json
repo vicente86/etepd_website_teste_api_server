@@ -1,0 +1,19 @@
+{
+  "name": "etepd_website_teste_api_server",
+  "version": "1.0.0",
+  "description": "Servidor provisório criado com node para o site provisório do etepd ",
+  "main": "src/app.js",
+  "scripts": {
+    "dev": "nodemon ./src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Daniel Vicente Rodrigues Ferreira",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "nodemon": "^2.0.18",
+    "sqlite": "^4.1.1",
+    "sqlite3": "^5.0.8"
+  },
+  "type": "module"
+}
