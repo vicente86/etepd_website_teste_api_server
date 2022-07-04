@@ -2,8 +2,11 @@ import {openDb} from './configDB.js';
 import express from 'express';
 import { insertUsuario, pesquisarTodosUsuario, pesquisarUsuario, updateUsuario, deletaUsuario } from './controller/usuario.js';
 import { raiz } from './paginas/pagRaiz.js';
+import cors from 'cors';
+
 
 const app = express();
+app.use(cors())
 app.use(express.json());
 
 openDb();
@@ -26,7 +29,13 @@ app.get('/pesquisa_usuario', async (req, res) => {
   let usuario = await pesquisarUsuario(req.body.email);
   
   if(usuario !== undefined){
-    res.json(usuario);  
+    res.json({
+      "id": usuario.id,
+      "nome": usuario.nome,
+      "email": usuario.email,
+      "senha": usuario.senha,
+      "codigo": usuario.codigo,
+      "msg": "sucesso"});  
   }else{
     res.json({
       "msg": "Nenhum usuário encontrado com esse email"
